@@ -28,3 +28,22 @@ config SOC_SERIES
 
 config SOC
 	default "polarfire" if SOC_POLARFIRE
+
+config MPFS_RSC_TABLE
+	bool "Add a section for resource table"
+	help
+	  This does the same thing as OPENAMP_RSC_TABLE except it doesn't
+	  declare a resource table and leave it for the user to define
+
+# Workaround for not being able to have commas in macro arguments
+DT_CHOSEN_Z_RSCTABLE_MEM := zephyr,rsctable-mem
+
+config DT_HAS_CHOSEN_Z_RSCTABLE_MEM_ENABLED
+	def_bool $(dt_chosen_enabled,$(DT_CHOSEN_Z_RSCTABLE_MEM))
+
+config MPFS_RELOCATE_RESOURCE_TABLE
+	bool "Relocate resource table"
+	depends on (OPENAMP_RSC_TABLE || MPFS_RSC_TABLE) && DT_HAS_CHOSEN_Z_RSCTABLE_MEM_ENABLED
+	help
+	  Copy resource table into a specific memory selected with the chosen node
+	  zephyr,rsctable-mem
