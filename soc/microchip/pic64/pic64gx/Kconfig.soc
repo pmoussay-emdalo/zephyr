@@ -30,8 +30,8 @@ config SOC
 config PIC64GX_RSC_TABLE
 	bool "Add a section for resource table"
 	help
-	  This do the same things than OPENAMP_RSC_TABLE except it doesn't
-	  declare a resource table and left that for the user to do
+	  This does the same thing as OPENAMP_RSC_TABLE except it doesn't
+	  declare a resource table and leave it for the user to define
 
 # Workaround for not being able to have commas in macro arguments
 DT_CHOSEN_Z_RSCTABLE_MEM := zephyr,rsctable-mem
