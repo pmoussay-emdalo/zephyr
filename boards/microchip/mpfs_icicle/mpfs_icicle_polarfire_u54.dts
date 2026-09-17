@@ -11,13 +11,13 @@
 	};
 
 	chosen {
-		zephyr,console = &uart1;
-		zephyr,shell-uart = &uart1;
+		zephyr,console = &mmuart1;
+		zephyr,shell-uart = &mmuart1;
 		zephyr,sram = &sram1;
 	};
 };
 
-&uart1 {
+&mmuart1 {
 	status = "okay";
 	current-speed = <115200>;
 	clock-frequency = <150000000>;

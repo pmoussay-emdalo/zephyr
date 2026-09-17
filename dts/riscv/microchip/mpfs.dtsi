@@ -173,7 +173,7 @@
 			};
 		};
 
-		uart0: uart@20000000 {
+		mmuart0: uart@20000000 {
 			compatible = "ns16550";
 			reg = <0x20000000 0x1000>;
 			clock-frequency = <150000000>;
@@ -184,7 +184,7 @@
 			status = "disabled";
 		};
 
-		uart1: uart@20100000 {
+		mmuart1: uart@20100000 {
 			compatible = "ns16550";
 			reg = <0x20100000 0x1000>;
 			clock-frequency = <150000000>;
@@ -195,7 +195,7 @@
 			status = "disabled";
 		};
 
-		uart2: uart@20102000 {
+		mmuart2: uart@20102000 {
 			compatible = "ns16550";
 			reg = <0x20102000 0x1000>;
 			clock-frequency = <150000000>;
@@ -206,7 +206,7 @@
 			status = "disabled";
 		};
 
-		uart3: uart@20104000 {
+		mmuart3: uart@20104000 {
 			compatible = "ns16550";
 			reg = <0x20104000 0x1000>;
 			clock-frequency = <150000000>;
@@ -217,7 +217,7 @@
 			status = "disabled";
 		};
 
-		uart4: uart@20106000 {
+		mmuart4: uart@20106000 {
 			compatible = "ns16550";
 			reg = <0x20106000 0x1000>;
 			clock-frequency = <150000000>;

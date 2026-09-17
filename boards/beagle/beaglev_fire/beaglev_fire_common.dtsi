@@ -26,13 +26,13 @@
 	};
 
 	chosen {
-		zephyr,console = &uart0;
-		zephyr,shell-uart = &uart0;
+		zephyr,console = &mmuart0;
+		zephyr,shell-uart = &mmuart0;
 		zephyr,sram = &ddr_cached_high;
 	};
 };
 
-&uart0 {
+&mmuart0 {
 	status = "okay";
 	current-speed = <115200>;
 	clock-frequency = <150000000>;
