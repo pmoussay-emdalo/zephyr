@@ -14,7 +14,7 @@ config RISCV_SOC_INTERRUPT_INIT
 	default y
 
 config 2ND_LVL_ISR_TBL_OFFSET
-	default 13
+	default 12
 
 config 2ND_LVL_INTR_00_OFFSET
 	default 11
@@ -23,6 +23,6 @@ config MAX_IRQ_PER_AGGREGATOR
 	default 186
 
 config NUM_IRQS
-	default 199
+	default 198
 
 endif # SOC_SERIES_POLARFIRE
