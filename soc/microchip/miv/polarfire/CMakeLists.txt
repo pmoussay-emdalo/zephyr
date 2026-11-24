@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
-zephyr_sources()
+zephyr_sources(soc.c)
 
 if(CONFIG_OPENAMP_RSC_TABLE)
   zephyr_linker_sources(ROM_SECTIONS ${CMAKE_CURRENT_SOURCE_DIR}/resource_table.ld)
