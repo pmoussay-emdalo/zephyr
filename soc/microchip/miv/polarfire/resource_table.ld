@@ -10,5 +10,9 @@ SECTION_PROLOGUE(.resource_table,, SUBALIGN(0x10))
 	__rsctable_start = .;
 	KEEP(*(.resource_table*))
 	__rsctable_end = .;
+#if CONFIG_MPFS_USE_CHOSEN_RSCTABLE_MEM
+} GROUP_LINK_IN(LINKER_DT_NODE_REGION_NAME_TOKEN(DT_CHOSEN(zephyr_rsctable_mem)))
+#else
 } GROUP_LINK_IN(ROMABLE_REGION)
+#endif
 __rsctable_load_start = LOADADDR(.resource_table);
